@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Laundry Wallah / Laundry Mart</title>
 </head>
 <body>
     <h1>Welcome to Laundry Wallah / Laundry Mart</h1>
-    <p>Welcome to Laundry Wallah / Laundry Mart, your one-stop solution for all your laundry needs. Our dedicated ensures top-notch services, providing a hassle-free and efficient laundry experience. With a focus on quality and customer satisfaction, we take ccare of your garments as if they were our own.</p>
-    <img width="130" height="128" alt="Screenshot 2025-08-24 at 6 19 44 PM" src="image.png" />
+    
+    <p>
+        Welcome to Laundry Wallah / Laundry Mart, your trusted partner for all your laundry needs. 
+        We are dedicated to delivering high-quality services with a focus on care, convenience, and customer satisfaction. 
+        Our team ensures your clothes are cleaned, ironed, and handled with utmost precision. 
+        Whether it’s your daily wear, office attire, or delicate garments, we provide the right treatment for every fabric. 
+        With affordable pricing and quick turnaround times, we make your laundry experience hassle-free. 
+        Let us take care of your clothes while you focus on what truly matters.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1604881993565-43a1e2367d4f" alt="Laundry shop" width="300">
 
     <h2>Our Services</h2>
     <ul>
@@ -20,36 +29,45 @@
         <li>Special Garment Care</li>
         <li>And More...</li>
     </ul>
+
     <h2>Price List</h2>
-    <table border>
+    <table border="1">
         <thead>
-        <tr>
-            <th>Service</th>
-            <th>Price</th>
-        </tr>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Washing and Drying</td>
-                <td>$10.00</td>
+                <td>Rs 10.00</td>
             </tr>
             <tr>
                 <td>Ironing and Folding</td>
-                <td>$5.00</td>
+                <td>Rs 5.00</td>
             </tr>
-            </tbody>
+        </tbody>
     </table>
 
+    <!-- Book Now Section -->
     <h2>Book Now</h2>
-    <form action="submit">
+    <form action="submit" method="post">
         <label for="name">Name: </label>
-        <input type="text">
-        <label for="mail">Email: </label>
-        <input type="mail">
-        <label for="number">Phone: </label>
-        <input type="number">
-        <input type="submit">
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone: </label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <input type="submit" value="Submit">
     </form>
-    <p><strong>Contact us: </strong>at info@laundrymart.com</p>
+
+    <!-- Footer Section -->
+    <footer>
+        <p><strong>Contact us at:</strong> info@laundrymart.com</p>
+    </footer>
 </body>
 </html>
