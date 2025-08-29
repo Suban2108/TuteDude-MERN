@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const tasksRouter = require('./routes/tasks.routes.js');
+const tasksRouter = require('./routes/task.routes.js');
 const { errorHandler, notFound } = require('./middlewares/error.middleware.js');
 
 const app = express();
