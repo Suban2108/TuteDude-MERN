@@ -1,0 +1,81 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #f4f4f9;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  margin: 20px 0;
+}
+
+#greeting {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Boxes */
+.box-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* Input and Button */
+.input-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#nameInput {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+#greetBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#greetBtn:hover {
+  background: #45a049;
+}
