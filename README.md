@@ -19,3 +19,15 @@
 9. Error Handling: If a user tries an invalid route, the server returns a JSON error message (404 Not Found).
 
       Together, these APIs allow users to add, view, update, complete, and delete tasks, forming the backend of a To-Do List application.
+
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 1 58 55 PM" src="https://github.com/user-attachments/assets/0654edd5-c6f1-4e26-afa8-76b92edc53c5" />
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 1 59 29 PM" src="https://github.com/user-attachments/assets/cb3c05ae-1899-422b-8026-7bbe2ce1173e" />
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 2 00 02 PM" src="https://github.com/user-attachments/assets/5cb85544-987f-453e-8661-cd4fb58176b0" />
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 2 00 38 PM" src="https://github.com/user-attachments/assets/1b31bff0-93c3-45cd-87b5-a268d4ec5725" />
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 2 02 56 PM" src="https://github.com/user-attachments/assets/92fc5f62-af50-4664-bd1a-8afa48aae9cd" />
+<img width="708" height="768" alt="Screenshot 2025-08-29 at 2 03 14 PM" src="https://github.com/user-attachments/assets/f39ac7dd-493b-40ff-b7c9-d6ef956c54a7" />
+
+
+
+
+
