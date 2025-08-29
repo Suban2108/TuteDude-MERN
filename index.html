@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Services</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">LaundryPro</div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="user">Hello, User</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <h1>Fresh Clothes, Hassle-Free</h1>
+      <p>Reliable laundry services delivered at your doorstep. Book a service today!</p>
+      <button onclick="scrollToBooking()">Book a Service Today</button>
+    </div>
+    <div class="hero-right">
+      <img src="image.png" alt="Laundry">
+    </div>
+  </section>
+
+  <!-- Service Overview -->
+  <section class="overview" id="services">
+    <div>15+ Laundry Services</div>
+    <div>240+ Happy Customers</div>
+    <div>2+ Years of Experience</div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking" id="booking">
+    <!-- Left Div: Service List -->
+    <div class="services-list">
+      <h2>Available Services</h2>
+      <div class="service">
+        <p>Shirt Wash - ₹50</p>
+        <button onclick="addItem('Shirt Wash', 50)">Add Item</button>
+      </div>
+      <div class="service">
+        <p>Pant Wash - ₹70</p>
+        <button onclick="addItem('Pant Wash', 70)">Add Item</button>
+      </div>
+      <div class="service">
+        <p>Dry Cleaning - ₹150</p>
+        <button onclick="addItem('Dry Cleaning', 150)">Add Item</button>
+      </div>
+      <p class="info">Add items to the cart before booking.</p>
+    </div>
+
+    <!-- Right Div: Cart + Booking Form -->
+    <div class="booking-right">
+      <!-- Cart -->
+      <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: ₹<span id="totalAmount">0</span></p>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="form">
+        <h2>Book Now</h2>
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <button onclick="bookNow()">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Description Section -->
+  <section class="quality">
+    <h2>Why Choose Us?</h2>
+    <div class="qualities">
+      <div class="quality-item">⭐ Premium Services</div>
+      <div class="quality-item">⚡ Quick Support</div>
+      <div class="quality-item">⏰ Timely Delivery</div>
+      <div class="quality-item">💰 Affordable Prices</div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Stay updated with our latest offers and services</p>
+    <input type="text" id="subName" placeholder="Full Name">
+    <input type="email" id="subEmail" placeholder="Email">
+    <button onclick="subscribe()">Subscribe</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">LaundryPro</div>
+    <ul class="footer-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#faq">Important Links</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="socials">
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="twitter.png" alt="Twitter"></a>
+    </div>
+    <p>&copy; 2025 LaundryPro. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
