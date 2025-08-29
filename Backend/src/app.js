@@ -14,7 +14,7 @@ const app = express();
 //   })
 // );
 
-app.use(cors());
+cors({ origin: "*", credentials: true })
 
 app.use(express.json()); // parse JSON bodies
 
