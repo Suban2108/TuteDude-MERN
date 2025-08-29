@@ -1,20 +1,21 @@
-// src/app.js
 const express = require('express');
 const cors = require('cors');
-const tasksRouter = require('./routes/task.routes.js');
-const { errorHandler, notFound } = require('./middlewares/error.middlwares.js');
+const tasksRouter = require('./routes/tasks.routes.js');
+const { errorHandler, notFound } = require('./middlewares/error.middleware.js');
 
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: "https://tute-dude-mern.vercel.app", // replace with your frontend URL
-//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-//     credentials: true
-//   })
-// );
-
-cors({ origin: "*", credentials: true })
+// Apply CORS properly
+app.use(
+  cors({
+    origin: [
+      "https://tute-dude-mern.vercel.app",   // frontend prod
+      "http://localhost:3000"                // frontend dev (optional)
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true
+  })
+);
 
 app.use(express.json()); // parse JSON bodies
 
