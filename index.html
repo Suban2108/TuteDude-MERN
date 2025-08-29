@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
   <nav>
     <div class="logo">LaundryPro</div>
@@ -42,34 +43,35 @@
 
   <!-- Booking Section -->
   <section class="booking" id="booking">
-    <!-- Left Div: Service List -->
     <div class="services-list">
       <h2>Available Services</h2>
       <div class="service">
         <p>Shirt Wash - ₹50</p>
-        <button onclick="addItem('Shirt Wash', 50)">Add Item</button>
+        <button id="add-Shirt Wash" onclick="addItem('Shirt Wash', 50)">Add Item</button>
+        <button id="remove-Shirt Wash" onclick="removeItemByName('Shirt Wash')" style="display:none;">Remove
+          Item</button>
       </div>
       <div class="service">
         <p>Pant Wash - ₹70</p>
-        <button onclick="addItem('Pant Wash', 70)">Add Item</button>
+        <button id="add-Pant Wash" onclick="addItem('Pant Wash', 70)">Add Item</button>
+        <button id="remove-Pant Wash" onclick="removeItemByName('Pant Wash')" style="display:none;">Remove Item</button>
       </div>
       <div class="service">
         <p>Dry Cleaning - ₹150</p>
-        <button onclick="addItem('Dry Cleaning', 150)">Add Item</button>
+        <button id="add-Dry Cleaning" onclick="addItem('Dry Cleaning', 150)">Add Item</button>
+        <button id="remove-Dry Cleaning" onclick="removeItemByName('Dry Cleaning')" style="display:none;">Remove
+          Item</button>
       </div>
       <p class="info">Add items to the cart before booking.</p>
     </div>
 
-    <!-- Right Div: Cart + Booking Form -->
     <div class="booking-right">
-      <!-- Cart -->
       <div class="cart">
         <h2>Cart</h2>
         <ul id="cartItems"></ul>
         <p>Total: ₹<span id="totalAmount">0</span></p>
       </div>
 
-      <!-- Booking Form -->
       <div class="form">
         <h2>Book Now</h2>
         <input type="text" id="fullName" placeholder="Full Name" required>
@@ -79,8 +81,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Quality Description Section -->
   <section class="quality">
     <h2>Why Choose Us?</h2>
     <div class="qualities">
@@ -109,13 +109,15 @@
       <li><a href="#contact">Contact Us</a></li>
     </ul>
     <div class="socials">
-      <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://i.pinimg.com/474x/f7/99/20/f79920f4cb34986684e29df42ec0cebe.jpg" alt="Facebook"></a>
+      <a href="#"><img src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram"></a>
+      <a href="#"><img src="https://i.pinimg.com/736x/b8/c8/46/b8c846a25866985a5719049b9f0c5890.jpg" alt="Twitter"></a>
     </div>
     <p>&copy; 2025 LaundryPro. All Rights Reserved.</p>
   </footer>
 
+
   <script src="script.js"></script>
 </body>
+
 </html>
