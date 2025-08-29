@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://todo-list-backend-4et1.onrender.com/api/tasks"
+  // baseURL: "https://todo-list-backend-4et1.onrender.com/api/tasks",
+  baseURL: "https://tutedude-mern-backend.onrender.com/api/tasks"
 });
 
 // Get all tasks
