@@ -6,7 +6,14 @@ const { errorHandler, notFound } = require('./middlewares/error.middlwares.js');
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://tute-dude-mern.vercel.app", // replace with your frontend URL
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true
+  })
+);
+
 app.use(express.json()); // parse JSON bodies
 
 // API routes
