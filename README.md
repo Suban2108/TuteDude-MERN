@@ -19,5 +19,5 @@ Backend for a To-Do list application implemented using Node.js, Express, and Mon
 ## Setup
 1. Clone the repo:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/Suban2108/TuteDude-MERN.git
    cd todo-backend
