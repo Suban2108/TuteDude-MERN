@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:4000/api/tasks"
+  baseURL: "https://tute-dude-mern-2fb2.vercel.app/api/tasks"
 });
 
 // Get all tasks
