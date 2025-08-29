@@ -7,8 +7,14 @@ const ProductList = () => {
     "https://api.escuelajs.co/api/v1/products"
   );
 
-  if (loading) {return <p className="loading">Loading products...</p>;
-  if (error) return <p className="error">Error: {error}</p>;}
+  // ✅ Fixed syntax
+  if (loading) {
+    return <p className="loading">Loading products...</p>;
+  }
+
+  if (error) {
+    return <p className="error">Error: {error}</p>;
+  }
 
   return (
     <div className="product-container">
