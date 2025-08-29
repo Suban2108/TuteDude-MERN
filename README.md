@@ -34,7 +34,7 @@ Backend for a To-Do list application implemented using Node.js, Express, and Mon
 <img width="708" height="768" alt="Screenshot 2025-08-29 at 3 21 20 PM" src="https://github.com/user-attachments/assets/d24d7d95-5f86-4925-ab39-56904bdcd581" />
 <img width="708" height="768" alt="Screenshot 2025-08-29 at 3 23 06 PM" src="https://github.com/user-attachments/assets/15bdacf1-4ef3-4f03-972a-27c3f7bef079" />
 <img width="708" height="768" alt="Screenshot 2025-08-29 at 3 23 29 PM" src="https://github.com/user-attachments/assets/b60c4835-94f5-4700-916a-1c26b0ef64be" />
-
+<img width="1116" height="647" alt="Screenshot 2025-08-29 at 3 31 35 PM" src="https://github.com/user-attachments/assets/b5522f48-6347-4518-b163-7861ec34eeb1" />
 
 
 
