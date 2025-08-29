@@ -1,12 +1,9 @@
 // Initialize EmailJS
-(function() {
-  emailjs.init("Otajak3CghIh0mM3m"); // Replace with your EmailJS user ID
-})();
+(function() { emailjs.init("Otajak3CghIh0mM3m"); })();
 
 let cart = [];
 let total = 0;
 
-// Scroll to booking section
 function scrollToBooking() {
   document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
 }
@@ -15,56 +12,64 @@ function scrollToBooking() {
 function addItem(name, price) {
   cart.push({ name, price });
   total += price;
+  toggleButtons(name, true);
   updateCart();
+}
+
+// Remove item by index
+function removeItem(index) {
+  const name = cart[index].name;
+  total -= cart[index].price;
+  cart.splice(index, 1);
+  toggleButtons(name, false);
+  updateCart();
+}
+
+// Remove item by name (for service buttons)
+function removeItemByName(name) {
+  const index = cart.findIndex(item => item.name === name);
+  if (index !== -1) removeItem(index);
+}
+
+// Toggle Add/Remove buttons
+function toggleButtons(name, added) {
+  const addBtn = document.getElementById(`add-${name}`);
+  const removeBtn = document.getElementById(`remove-${name}`);
+  if (added) {
+    addBtn.style.display = "none";
+    removeBtn.style.display = "inline-block";
+  } else {
+    addBtn.style.display = "inline-block";
+    removeBtn.style.display = "none";
+  }
 }
 
 // Update cart display
 function updateCart() {
   const cartItems = document.getElementById("cartItems");
   const totalAmount = document.getElementById("totalAmount");
-  
   cartItems.innerHTML = "";
-  cart.forEach((item, index) => {
+  cart.forEach(item => {
     let li = document.createElement("li");
     li.textContent = `${item.name} - ₹${item.price}`;
-    let removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
-    removeBtn.style.marginLeft = "10px";
-    removeBtn.onclick = () => removeItem(index);
-    li.appendChild(removeBtn);
     cartItems.appendChild(li);
   });
-  
   totalAmount.textContent = total;
 }
 
-// Remove item
-function removeItem(index) {
-  total -= cart[index].price;
-  cart.splice(index, 1);
-  updateCart();
-}
-
-// Book Now (send email)
+// Book now
 function bookNow() {
   const fullName = document.getElementById("fullName").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
 
   if (!fullName || !email || !phone || cart.length === 0) {
-    alert("Please fill in all fields and add items to cart.");
+    alert("Please fill all fields and add items to cart.");
     return;
   }
 
   const orderDetails = cart.map(item => `${item.name} - ₹${item.price}`).join(", ");
-
-  const params = {
-    name: fullName,
-    email: email,
-    phone: phone,
-    order: orderDetails,
-    total: total
-  };
+  const params = { name: fullName, email, phone, order: orderDetails, total };
 
   emailjs.send("service_gmx6bps", "template_vonuz1t", params)
     .then(() => {
@@ -75,7 +80,8 @@ function bookNow() {
       document.getElementById("fullName").value = "";
       document.getElementById("email").value = "";
       document.getElementById("phone").value = "";
-    }, (error) => {
+      ["Shirt Wash","Pant Wash","Dry Cleaning"].forEach(name => toggleButtons(name, false));
+    }, error => {
       alert("Failed to send email: " + JSON.stringify(error));
     });
 }
