@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation Styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -52,7 +50,6 @@ nav ul li a:hover {
   font-size: 0.9rem;
 }
 
-/* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -80,7 +77,6 @@ nav ul li a:hover {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -137,7 +133,6 @@ nav ul li a:hover {
   max-width: 500px;
 }
 
-/* Overview Section */
 .overview {
   display: flex;
   justify-content: space-around;
@@ -163,7 +158,6 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
-/* Booking Section */
 .booking {
   display: flex;
   gap: 40px;
@@ -238,7 +232,6 @@ nav ul li a:hover {
   margin-top: 20px;
 }
 
-/* Cart Styles */
 .cart {
   margin-bottom: 30px;
   padding-bottom: 20px;
@@ -265,7 +258,6 @@ nav ul li a:hover {
   border-radius: 8px;
 }
 
-/* Form Styles */
 .form input {
   width: 100%;
   padding: 15px;
@@ -300,7 +292,6 @@ nav ul li a:hover {
   box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
 }
 
-/* Quality Section */
 .quality {
   background: #f9f9f9;
   text-align: center;
@@ -351,7 +342,6 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-/* Newsletter Section */
 .newsletter {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -408,7 +398,6 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Footer Styles */
 footer {
   background: #2c3e50;
   color: white;
@@ -469,9 +458,6 @@ footer {
   color: #bdc3c7;
 }
 
-/* Responsive Design */
-
-/* Tablet Styles */
 @media screen and (max-width: 1024px) {
   nav {
     padding: 15px 30px;
@@ -498,9 +484,7 @@ footer {
   }
 }
 
-/* Mobile Styles */
 @media screen and (max-width: 768px) {
-  /* Navigation */
   nav {
     padding: 15px 20px;
     position: relative;
@@ -546,7 +530,6 @@ footer {
     display: none;
   }
 
-  /* Hero Section */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -570,7 +553,6 @@ footer {
     max-width: 350px;
   }
 
-  /* Overview Section */
   .overview {
     flex-direction: column;
     gap: 20px;
@@ -581,7 +563,6 @@ footer {
     font-size: 2rem;
   }
 
-  /* Booking Section */
   .booking {
     flex-direction: column;
     gap: 30px;
@@ -603,7 +584,6 @@ footer {
     padding: 12px;
   }
 
-  /* Quality Section */
   .quality {
     padding: 40px 20px;
   }
@@ -617,7 +597,6 @@ footer {
     gap: 20px;
   }
 
-  /* Newsletter Section */
   .newsletter {
     padding: 40px 20px;
   }
@@ -642,7 +621,6 @@ footer {
     max-width: 300px;
   }
 
-  /* Footer */
   .footer-content {
     flex-direction: column;
     gap: 15px;
@@ -664,7 +642,6 @@ footer {
   }
 }
 
-/* Extra Small Mobile Styles */
 @media screen and (max-width: 320px) {
   .hero-left h1 {
     font-size: 1.6rem;
@@ -709,7 +686,6 @@ footer {
   }
 }
 
-/* Small Mobile Styles */
 @media screen and (max-width: 480px) {
   nav {
     padding: 10px 15px;
@@ -789,5 +765,3 @@ footer {
   .newsletter h2 {
     font-size: 1.6rem;
   }
-  
-  .footer-
