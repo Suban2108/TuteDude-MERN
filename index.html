@@ -13,8 +13,12 @@
   <!-- Navbar -->
   <nav>
     <div class="logo">LaundryPro</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-menu" id="navMenu">
       <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About Us</a></li>
@@ -31,15 +35,24 @@
       <button onclick="scrollToBooking()">Book a Service Today</button>
     </div>
     <div class="hero-right">
-      <img src="image.png" alt="Laundry">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laundry">
     </div>
   </section>
 
   <!-- Service Overview -->
   <section class="overview" id="services">
-    <div>15+ Laundry Services</div>
-    <div>240+ Happy Customers</div>
-    <div>2+ Years of Experience</div>
+    <div class="stat-item">
+      <h3>15+</h3>
+      <p>Laundry Services</p>
+    </div>
+    <div class="stat-item">
+      <h3>240+</h3>
+      <p>Happy Customers</p>
+    </div>
+    <div class="stat-item">
+      <h3>2+</h3>
+      <p>Years of Experience</p>
+    </div>
   </section>
 
   <!-- Booking Section -->
@@ -47,19 +60,34 @@
     <div class="services-list">
       <h2>Available Services</h2>
       <div class="service">
-        <p>Shirt Wash - ₹50</p>
-        <button id="add-Shirt Wash" onclick="addItem('Shirt Wash', 50)">Add Item</button>
-        <button id="remove-Shirt Wash" onclick="removeItemByName('Shirt Wash')" style="display:none;">Remove Item</button>
+        <div class="service-info">
+          <h3>Shirt Wash</h3>
+          <p class="price">₹50</p>
+        </div>
+        <div class="service-actions">
+          <button id="add-Shirt Wash" onclick="addItem('Shirt Wash', 50)">Add Item</button>
+          <button id="remove-Shirt Wash" onclick="removeItemByName('Shirt Wash')" style="display:none;">Remove Item</button>
+        </div>
       </div>
       <div class="service">
-        <p>Pant Wash - ₹70</p>
-        <button id="add-Pant Wash" onclick="addItem('Pant Wash', 70)">Add Item</button>
-        <button id="remove-Pant Wash" onclick="removeItemByName('Pant Wash')" style="display:none;">Remove Item</button>
+        <div class="service-info">
+          <h3>Pant Wash</h3>
+          <p class="price">₹70</p>
+        </div>
+        <div class="service-actions">
+          <button id="add-Pant Wash" onclick="addItem('Pant Wash', 70)">Add Item</button>
+          <button id="remove-Pant Wash" onclick="removeItemByName('Pant Wash')" style="display:none;">Remove Item</button>
+        </div>
       </div>
       <div class="service">
-        <p>Dry Cleaning - ₹150</p>
-        <button id="add-Dry Cleaning" onclick="addItem('Dry Cleaning', 150)">Add Item</button>
-        <button id="remove-Dry Cleaning" onclick="removeItemByName('Dry Cleaning')" style="display:none;">Remove Item</button>
+        <div class="service-info">
+          <h3>Dry Cleaning</h3>
+          <p class="price">₹150</p>
+        </div>
+        <div class="service-actions">
+          <button id="add-Dry Cleaning" onclick="addItem('Dry Cleaning', 150)">Add Item</button>
+          <button id="remove-Dry Cleaning" onclick="removeItemByName('Dry Cleaning')" style="display:none;">Remove Item</button>
+        </div>
       </div>
       <p class="info">Add items to the cart before booking.</p>
     </div>
@@ -68,14 +96,14 @@
       <div class="cart">
         <h2>Cart</h2>
         <ul id="cartItems"></ul>
-        <p>Total: ₹<span id="totalAmount">0</span></p>
+        <p class="total">Total: ₹<span id="totalAmount">0</span></p>
       </div>
 
       <div class="form">
         <h2>Book Now</h2>
         <input type="text" id="fullName" placeholder="Full Name" required>
         <input type="email" id="email" placeholder="Email" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
         <button onclick="bookNow()">Book Now</button>
       </div>
     </div>
@@ -85,43 +113,59 @@
   <section class="quality">
     <h2>Why Choose Us?</h2>
     <div class="qualities">
-      <div class="quality-item">⭐ Premium Services</div>
-      <div class="quality-item">⚡ Quick Support</div>
-      <div class="quality-item">⏰ Timely Delivery</div>
-      <div class="quality-item">💰 Affordable Prices</div>
+      <div class="quality-item">
+        <span class="quality-icon">⭐</span>
+        <h3>Premium Services</h3>
+        <p>High-quality cleaning with attention to detail</p>
+      </div>
+      <div class="quality-item">
+        <span class="quality-icon">⚡</span>
+        <h3>Quick Support</h3>
+        <p>Fast and responsive customer service</p>
+      </div>
+      <div class="quality-item">
+        <span class="quality-icon">⏰</span>
+        <h3>Timely Delivery</h3>
+        <p>On-time pickup and delivery guaranteed</p>
+      </div>
+      <div class="quality-item">
+        <span class="quality-icon">💰</span>
+        <h3>Affordable Prices</h3>
+        <p>Competitive rates without compromising quality</p>
+      </div>
     </div>
   </section>
 
   <!-- Newsletter Subscription Section -->
   <section class="newsletter">
-    <h2>Subscribe to Our Newsletter</h2>
-    <p>Stay updated with our latest offers and services</p>
-    <input type="text" id="subName" placeholder="Full Name">
-    <input type="email" id="subEmail" placeholder="Email">
-    <button onclick="subscribe()">Subscribe</button>
+    <div class="newsletter-container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with our latest offers and services</p>
+      <div class="newsletter-form">
+        <input type="text" id="subName" placeholder="Full Name">
+        <input type="email" id="subEmail" placeholder="Email">
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-logo">LaundryPro</div>
-    <ul class="footer-links">
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#faq">Important Links</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-    <div class="socials">
-      <a href="#"><img src="https://i.pinimg.com/474x/f7/99/20/f79920f4cb34986684e29df42ec0cebe.jpg" alt="Facebook"></a>
-      <a href="#"><img src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram"></a>
-      <a href="#"><img src="https://i.pinimg.com/736x/b8/c8/46/b8c846a25866985a5719049b9f0c5890.jpg" alt="Twitter"></a>
+    <div class="footer-content">
+      <div class="footer-logo">LaundryPro</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#faq">Important Links</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="socials">
+        <a href="#"><img src="https://i.pinimg.com/474x/f7/99/20/f79920f4cb34986684e29df42ec0cebe.jpg" alt="Facebook"></a>
+        <a href="#"><img src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram"></a>
+        <a href="#"><img src="https://i.pinimg.com/736x/b8/c8/46/b8c846a25866985a5719049b9f0c5890.jpg" alt="Twitter"></a>
+      </div>
     </div>
-    <p>&copy; 2025 LaundryPro. All Rights Reserved.</p>
+    <p class="copyright">&copy; 2025 LaundryPro. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
-  </script>
 
   <script src="script.js"></script>
 </body>
