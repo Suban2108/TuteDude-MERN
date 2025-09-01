@@ -1,17 +1,13 @@
-// Mobile menu toggle functionality - Add this to your script.js file
-
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
 
-  // Toggle mobile menu
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', function() {
       navMenu.classList.toggle('active');
       menuToggle.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -19,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
         navMenu.classList.remove('active');
@@ -29,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Your existing cart functionality and other functions go below this...
-
-// Initialize EmailJS
 (function() { emailjs.init("Otajak3CghIh0mM3m"); })();
 
 let cart = [];
@@ -41,7 +33,6 @@ function scrollToBooking() {
   document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
 }
 
-// Add item to cart
 function addItem(name, price) {
   cart.push({ name, price });
   total += price;
@@ -49,7 +40,6 @@ function addItem(name, price) {
   updateCart();
 }
 
-// Remove item by index
 function removeItem(index) {
   const name = cart[index].name;
   total -= cart[index].price;
@@ -58,13 +48,11 @@ function removeItem(index) {
   updateCart();
 }
 
-// Remove item by name (for service buttons)
 function removeItemByName(name) {
   const index = cart.findIndex(item => item.name === name);
   if (index !== -1) removeItem(index);
 }
 
-// Toggle Add/Remove buttons
 function toggleButtons(name, added) {
   const addBtn = document.getElementById(`add-${name}`);
   const removeBtn = document.getElementById(`remove-${name}`);
@@ -77,7 +65,6 @@ function toggleButtons(name, added) {
   }
 }
 
-// Update cart display
 function updateCart() {
   const cartItems = document.getElementById("cartItems");
   const totalAmount = document.getElementById("totalAmount");
@@ -90,7 +77,6 @@ function updateCart() {
   totalAmount.textContent = total;
 }
 
-// Book now
 function bookNow() {
   const fullName = document.getElementById("fullName").value;
   const email = document.getElementById("email").value;
