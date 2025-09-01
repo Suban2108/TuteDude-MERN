@@ -13,7 +13,8 @@
   <!-- Navbar -->
   <nav>
     <div class="logo">LaundryPro</div>
-    <ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About Us</a></li>
@@ -48,8 +49,7 @@
       <div class="service">
         <p>Shirt Wash - ₹50</p>
         <button id="add-Shirt Wash" onclick="addItem('Shirt Wash', 50)">Add Item</button>
-        <button id="remove-Shirt Wash" onclick="removeItemByName('Shirt Wash')" style="display:none;">Remove
-          Item</button>
+        <button id="remove-Shirt Wash" onclick="removeItemByName('Shirt Wash')" style="display:none;">Remove Item</button>
       </div>
       <div class="service">
         <p>Pant Wash - ₹70</p>
@@ -59,8 +59,7 @@
       <div class="service">
         <p>Dry Cleaning - ₹150</p>
         <button id="add-Dry Cleaning" onclick="addItem('Dry Cleaning', 150)">Add Item</button>
-        <button id="remove-Dry Cleaning" onclick="removeItemByName('Dry Cleaning')" style="display:none;">Remove
-          Item</button>
+        <button id="remove-Dry Cleaning" onclick="removeItemByName('Dry Cleaning')" style="display:none;">Remove Item</button>
       </div>
       <p class="info">Add items to the cart before booking.</p>
     </div>
@@ -81,6 +80,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Quality Section -->
   <section class="quality">
     <h2>Why Choose Us?</h2>
     <div class="qualities">
@@ -116,6 +117,11 @@
     <p>&copy; 2025 LaundryPro. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
